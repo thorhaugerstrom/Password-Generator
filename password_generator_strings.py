@@ -11,7 +11,6 @@ def generate_password(min_length):
     words = [get_random_word(min_length) for _ in range(5)]
     password = '-'.join(words)
 
-    # Calculate the hash of the password using SHA-256
     hashed_password = hashlib.sha256(password.encode()).hexdigest()
 
     return password, hashed_password
